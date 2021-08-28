@@ -7,5 +7,7 @@ public class MyApp {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.register(AppConfig.class);
         context.refresh();
+
+        ((SalesTool)context.getBean("salesTool")).generate();
     }
 }
