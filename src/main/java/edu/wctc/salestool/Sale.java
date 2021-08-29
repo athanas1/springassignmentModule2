@@ -5,12 +5,21 @@ public class Sale {
     private String country;
     private double amount;
     private double tax;
+    private double shipping;
 
     public Sale(String customer, String country, double amount, double tax) {
         this.customer = customer;
         this.country = country;
         this.amount = amount;
         this.tax = tax;
+    }
+
+    public double getShipping() {
+        return shipping;
+    }
+
+    public void setShipping(double shipping) {
+        this.shipping = shipping;
     }
 
     public String getCustomer() {
@@ -47,6 +56,6 @@ public class Sale {
 
     @Override
     public String toString() {
-        return "Customer :" + customer + ", Country: " + country + ", Cost: " + amount + " Tax: " + tax;
+        return "Customer :" + customer + ", Country: " + country + ", Cost: " + amount + " Tax: " + tax + " Shipping Cost: " + shipping;
     }
 }

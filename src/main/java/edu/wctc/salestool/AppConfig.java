@@ -1,6 +1,8 @@
 package edu.wctc.salestool;
 
 import edu.wctc.salestool.iface.SalesInput;
+import edu.wctc.salestool.iface.ShippingPolicy;
+import edu.wctc.salestool.impl.FreeShipping;
 import edu.wctc.salestool.impl.SalesInputConsole;
 import edu.wctc.salestool.impl.SalesInputTxt;
 import org.springframework.context.annotation.Bean;
@@ -13,6 +15,12 @@ public class AppConfig {
     @Bean
     public SalesInput salesInput () {
         return new SalesInputTxt();
+
+         //return new SalesInputConsole();
+    }
+    @Bean
+    public ShippingPolicy shippingPolicy () {
+        return new FreeShipping();
     }
 
 }
