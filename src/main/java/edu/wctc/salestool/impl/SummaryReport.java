@@ -12,7 +12,7 @@ public class SummaryReport implements SalesReport {
     @Override
     public void generateReport(List<Sale> salesList) {
         ArrayList<String> countries = new ArrayList<>();
-        //I struggled trying to add the sum of the arrays based on the country attribute, Any tips?
+        //I struggled trying to add the sum of the arrays based on the country attribute, Any tips? DOESN'T WORK WITH CONSOLE INPUT
         double usCost = 0;
         double scotCost = 0;
         double japanCost = 0;
